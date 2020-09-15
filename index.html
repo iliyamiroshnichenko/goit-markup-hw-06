@@ -420,13 +420,18 @@
             >
             <input
               type="email"
-              name="email"
+              name="e-mail"
               class="subcribe-input"
               id="footer-email"
               placeholder="E-mail"
             />
           </div>
-          <button type="submit" class="button primary">Подписаться</button>
+          <button type="submit" class="button primary">
+            Подписаться
+            <svg class="icon" width="24" height="24">
+              <use href="./images/svg/sprite.svg#icon-subscribe"></use>
+            </svg>
+          </button>
         </form>
       </div>
     </footer>
@@ -441,32 +446,47 @@
         <form class="modal-form" autocomplete="off">
           <div class="form-field">
             <label for="modal-name" class="form-label">Имя</label>
-            <input
-              type="text"
-              class="form-input"
-              name="name"
-              id="modal-name"
-              autofocus
-            />
+            <div class="input-block">
+              <input
+                type="text"
+                class="form-input"
+                name="name"
+                id="modal-name"
+                autofocus
+              />
+              <svg class="icon" width="12" height="12">
+                <use href="./images/svg/sprite.svg#icon-modalform-name"></use>
+              </svg>
+            </div>
           </div>
           <div class="form-field">
             <label for="modal-tel" class="form-label">Телефон</label>
-            <input type="tel" class="form-input" name="tel" id="modal-tel" />
+            <div class="input-block">
+              <input type="tel" class="form-input" name="tel" id="modal-tel" />
+              <svg class="icon" width="13" height="13">
+                <use href="./images/svg/sprite.svg#icon-modalform-tel"></use>
+              </svg>
+            </div>
           </div>
           <div class="form-field">
             <label for="modal-email" class="form-label">Почта</label>
-            <input
-              type="email"
-              class="form-input"
-              name="email"
-              id="modal-email"
-            />
+            <div class="input-block">
+              <input
+                type="email"
+                class="form-input"
+                name="e-mail"
+                id="modal-email"
+              />
+              <svg class="icon" width="15" height="12">
+                <use href="./images/svg/sprite.svg#icon-modalform-email"></use>
+              </svg>
+            </div>
           </div>
           <div class="form-field">
             <label for="modal-comment" class="form-label">Комментарий</label>
             <textarea
               class="form-input form-comment"
-              name="comment"
+              name="commment"
               id="modal-comment"
               placeholder="Введите текст"
             ></textarea>
@@ -482,7 +502,6 @@
         </form>
       </div>
     </div>
-
     <script src="./js/modal.js"></script>
   </body>
 </html>
