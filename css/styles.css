@@ -604,7 +604,9 @@ svg {
 .form-field .input-icon {
   position: absolute;
   top: 50%;
-  left: 14px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
   fill: currentColor;
   transform: translateY(-50%);
 
@@ -622,9 +624,6 @@ svg {
 
   transition: border-color 250ms var(--timing-function);
 }
-/* .input-block .form-input:focus + .input-icon {
-  fill: var(--accent-color);
-} */
 
 /* комментарий модалки */
 .form-field .form-comment {
@@ -639,16 +638,6 @@ svg {
 
   color: rgba(117, 117, 117, 0.5);
 }
-/* чекбокс */
-/* .modal-form input[type="checkbox"] {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  border: 0.75px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: var(--main-text-color);
-} */
-
 .modal-form .form-policy {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -674,9 +663,8 @@ svg {
 .checkbox:checked + .policy-label::before {
   background-color: var(--accent-color);
   background-image: url(../images/svg/checkbox.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
+  border-color: transparent;
+  background-origin: border-box;
   box-shadow: none;
 }
 
