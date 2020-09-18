@@ -285,20 +285,23 @@ svg {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
 /* текст секции примеры работ*/
-.examples-list .text {
+.examples-list .absolute {
   position: absolute;
   left: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 70px;
-  margin: 0;
   background-color: rgba(47, 48, 58, 0.8);
+}
+
+.examples-list .text {
+  margin: 0;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
 
   color: var(--main-bg-color);
@@ -353,27 +356,21 @@ svg {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  fill: var(--icon-color);
 
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
 }
 /* меняем фон ссылки при ховере */
 .network-list .link:hover,
 .network-list .link:focus {
   background-color: var(--accent-color);
+  fill: var(--main-bg-color);
 }
-
 /* иконка */
 .network-list .icon {
   width: 20px;
   height: 20px;
-  fill: var(--icon-color);
-
-  transition: fill 250ms var(--timing-function);
-}
-/* меняем цвет самой иконки при ховере */
-.network-list .link:hover > .icon,
-.network-list .link:focus > .icon {
-  fill: var(--main-bg-color);
 }
 /* ширина элеентов секции клиенты */
 .clients-list .item {
@@ -390,7 +387,6 @@ svg {
 
   transition: border-color 250ms var(--timing-function);
 }
-
 /* цвет рамки при ховере */
 .clients-list .link:hover,
 .clients-list .link:focus,
@@ -401,7 +397,6 @@ svg {
   fill: var(--icon-color);
   transition: fill 250ms var(--timing-function);
 }
-
 /* футер */
 .footer {
   padding-top: 60px;
@@ -462,9 +457,6 @@ svg {
 /* фон ссылки на соцсеть в футере */
 .footer-networks .link {
   background-color: rgba(255, 255, 255, 0.1);
-}
-/* цвет иконки в футере */
-.footer-networks .icon {
   fill: var(--main-bg-color);
 }
 /* форма футера */
@@ -648,8 +640,7 @@ svg {
   color: var(--second-text-color);
 }
 
-.policy-label::before {
-  content: "";
+.checkbox-custom {
   display: inline-block;
   margin-right: 7px;
   vertical-align: text-top;
@@ -660,7 +651,7 @@ svg {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.checkbox:checked + .policy-label::before {
+.checkbox:checked ~ .checkbox-custom {
   background-color: var(--accent-color);
   background-image: url(../images/svg/checkbox.svg);
   border-color: transparent;
